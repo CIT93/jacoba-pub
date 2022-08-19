@@ -7,7 +7,7 @@ const displayOnPage = function (text) {
 
 
 let isHomeworkComplete = true  
-let haveYouCleanedRoom = false
+let haveYouCleanedRoom = true
 
 
 if(isHomeworkComplete){ // If statement
