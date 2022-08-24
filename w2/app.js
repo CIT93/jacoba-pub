@@ -29,12 +29,12 @@ if(!isHomeworkComplete || !haveYouCleanedRoom ){
 
 let time = howMuchTime(1) //global variable 
 
-function howMuchTime(time) {
-let a = 4 //local variable 
-return a + time
+let timeConverter = function(x){ //This function takes the mintues and converts it to hours
+hours = x/60
+displayOnPage(hours)
 }
  
-displayOnPage(time)
+timeConverter(120)
 
 
 //displayOnPage(output)
