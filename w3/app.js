@@ -6,6 +6,50 @@ const displayOnPage = function (text) {
 }
 
 
+
+let roomClean
+let checkRoom = function(x = 'undefined'){ //This function takes the mintues and converts it to hours
+if(x === "clean"){
+    displayOnPage('Your room is clean')
+     roomClean = true
+}else {
+    displayOnPage('Your room is dirty')
+     roomClean = false
+
+}
+
+}
+let hwStatus
+let checkAssignments = function(x){ 
+    if(x === 'complete'){
+        displayOnPage('Your homework is done')
+         hwStatus = true //global varible 
+    }else {
+        displayOnPage("Your homework isn't complete")
+         hwStatus = false
+    
+    }
+}
+
+let hasFreeTime = function(roomClean, hwStatus){
+if(roomClean & hwStatus){
+    displayOnPage('You are free for the rest of the day')
+} else {
+    displayOnPage('You must finish your HW and or room')
+}
+}
+displayOnPage('<b> Is your room clean?</b>') 
+checkRoom('clean')
+displayOnPage('<b> Is your homework done?</b>') 
+checkAssignments('complete')
+displayOnPage('<b> Do you have free time?</b>') 
+hasFreeTime(roomClean, hwStatus)
+
+
+
+
+
+
 // let isHomeworkComplete = true
 // let haveYouCleanedRoom = true
 
@@ -28,24 +72,4 @@ const displayOnPage = function (text) {
 // }
 
 //let time = howMuchTime(1) //global variable 
-
-let mintueToHour = function(x = 'undefined'){ //This function takes the mintues and converts it to hours
-hours = x/60
-displayOnPage(`This is ${hours} hours`)
-}
-
-let hourToMintue = function(x){ //converts hours to mintues
-    mintues = 60*x
-    displayOnPage(`This is ${mintues} mintues`)
-    return mintues
-}
-mintueToHour(120)
-mintueToHour()
-let currentTime = hourToMintue(.5)
-let futuretime = hourToMintue(1)
-
-
-
-
-
 //displayOnPage(output)
