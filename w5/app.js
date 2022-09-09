@@ -26,7 +26,7 @@ const activitiesList = [
 let enoughTime = function(x){ //This function will check if i have enough time to do the activities. 
 
       for (let i = 0; i <= x.length; i++){
-         if(x[i].time >= 2){ // 2 hours
+         if(x[i].time <= 2){ // 2 hours
           displayOnPage(x[i].actvity)
          }
      }
